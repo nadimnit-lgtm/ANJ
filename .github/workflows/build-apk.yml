@@ -16,26 +16,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Show repository files
+      - name: Show repository structure
         run: |
-          echo "Repository root files:"
+          echo "Repository root:"
           ls -la
-          echo "Finding Android Gradle files:"
-          find . -maxdepth 4 -name "settings.gradle" -o -name "settings.gradle.kts" -o -name "build.gradle" -o -name "build.gradle.kts" -o -name "gradlew"
+          echo "Gradle and Android files found:"
+          find . -maxdepth 6 \( -name "settings.gradle" -o -name "settings.gradle.kts" -o -name "build.gradle" -o -name "build.gradle.kts" -o -name "gradlew" -o -name "gradle-wrapper.properties" \)
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v6
         with:
-          gradle-version: 8.7
+          gradle-version: '8.7'
 
       - name: Detect Android project folder
         shell: bash
@@ -43,11 +43,13 @@ jobs:
           if [ -f "settings.gradle" ] || [ -f "settings.gradle.kts" ]; then
             echo "PROJECT_DIR=." >> $GITHUB_ENV
           else
-            FOUND_DIR=$(find . -maxdepth 4 \( -name "settings.gradle" -o -name "settings.gradle.kts" \) -print -quit | xargs dirname)
-            if [ -z "$FOUND_DIR" ]; then
-              echo "No settings.gradle or settings.gradle.kts found. Android project files are missing or uploaded in the wrong folder."
+            FOUND_SETTINGS=$(find . -maxdepth 6 \( -name "settings.gradle" -o -name "settings.gradle.kts" \) -print -quit)
+            if [ -z "$FOUND_SETTINGS" ]; then
+              echo "ERROR: No settings.gradle or settings.gradle.kts found."
+              echo "Your Android project files are missing from the repository or uploaded inside the wrong folder."
               exit 1
             fi
+            FOUND_DIR=$(dirname "$FOUND_SETTINGS")
             echo "PROJECT_DIR=$FOUND_DIR" >> $GITHUB_ENV
           fi
 
@@ -55,16 +57,12 @@ jobs:
         shell: bash
         run: |
           cd "$PROJECT_DIR"
-          if [ -f "./gradlew" ]; then
-            chmod +x ./gradlew
-            ./gradlew assembleDebug --stacktrace
-          else
-            gradle assembleDebug --stacktrace
-          fi
+          echo "Building from: $PWD"
+          gradle assembleDebug --stacktrace
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Azkar-TV-Display-Debug-APK
+          name: Dua-Zikr-Debug-APK
           path: |
             **/build/outputs/apk/debug/*.apk
