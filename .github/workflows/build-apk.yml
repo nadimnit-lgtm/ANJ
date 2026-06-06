@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build ANJ APK
 
 on:
   workflow_dispatch:
@@ -13,56 +13,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout source
+        uses: actions/checkout@v6
 
-      - name: Show repository structure
-        run: |
-          echo "Repository root:"
-          ls -la
-          echo "Gradle and Android files found:"
-          find . -maxdepth 6 \( -name "settings.gradle" -o -name "settings.gradle.kts" -o -name "build.gradle" -o -name "build.gradle.kts" -o -name "gradlew" -o -name "gradle-wrapper.properties" \)
-
-      - name: Set up Java 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: 17
+          cache: gradle
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Make Gradle Wrapper executable
+        run: chmod +x ./gradlew
 
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v6
-        with:
-          gradle-version: '8.7'
+      - name: Verify Gradle Wrapper
+        run: ./gradlew --version
 
-      - name: Detect Android project folder
-        shell: bash
-        run: |
-          if [ -f "settings.gradle" ] || [ -f "settings.gradle.kts" ]; then
-            echo "PROJECT_DIR=." >> $GITHUB_ENV
-          else
-            FOUND_SETTINGS=$(find . -maxdepth 6 \( -name "settings.gradle" -o -name "settings.gradle.kts" \) -print -quit)
-            if [ -z "$FOUND_SETTINGS" ]; then
-              echo "ERROR: No settings.gradle or settings.gradle.kts found."
-              echo "Your Android project files are missing from the repository or uploaded inside the wrong folder."
-              exit 1
-            fi
-            FOUND_DIR=$(dirname "$FOUND_SETTINGS")
-            echo "PROJECT_DIR=$FOUND_DIR" >> $GITHUB_ENV
-          fi
+      - name: Clean project
+        run: ./gradlew clean --no-daemon
 
       - name: Build debug APK
-        shell: bash
-        run: |
-          cd "$PROJECT_DIR"
-          echo "Building from: $PWD"
-          gradle assembleDebug --stacktrace
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
 
-      - name: Upload APK artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Dua-Zikr-Debug-APK
-          path: |
-            **/build/outputs/apk/debug/*.apk
+          name: ANJ-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
