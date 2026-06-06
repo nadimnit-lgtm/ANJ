@@ -1,0 +1,579 @@
+{
+  "schema_version": "Rev07.03",
+  "types": [
+    {
+      "key": "dua",
+      "label": "Dua",
+      "count": 150
+    },
+    {
+      "key": "azkar",
+      "label": "Azkar",
+      "count": 66
+    }
+  ],
+  "categories": [
+    {
+      "key": "after_salah_azkar",
+      "label": "After Salah Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "After Salah",
+        "After Salah Azkar",
+        "After Salah; Istighfar",
+        "After Salah; Protection; Tahleel",
+        "After Salah; Tahleel",
+        "After Salah; Tahmid",
+        "After Salah; Takbir",
+        "After Salah; Tasbih",
+        "Expanded Azkar"
+      ],
+      "count": 12
+    },
+    {
+      "key": "anxiety_and_distress_duas",
+      "label": "Anxiety & Distress Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Anxiety & Distress Duas",
+        "Ease"
+      ],
+      "count": 6
+    },
+    {
+      "key": "before_sleep_azkar",
+      "label": "Before Sleep Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Before Sleep Azkar",
+        "Protection before Sleep",
+        "Quran before Sleep"
+      ],
+      "count": 4
+    },
+    {
+      "key": "children_duas",
+      "label": "Children Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Children Duas"
+      ],
+      "count": 2
+    },
+    {
+      "key": "daily_duas",
+      "label": "Daily Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Anger",
+        "Clothing",
+        "Daily Duas",
+        "Food and Drink",
+        "Home",
+        "Marketplace",
+        "Mosque",
+        "Rain",
+        "Sneezing",
+        "Weather",
+        "Wudu"
+      ],
+      "count": 17
+    },
+    {
+      "key": "darood_and_salawat",
+      "label": "Darood and Salawat",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Authentic Salawat Forms",
+        "Salawat Forms"
+      ],
+      "count": 11
+    },
+    {
+      "key": "evening_azkar",
+      "label": "Evening Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Evening",
+        "Evening Azkar",
+        "Evening; Protection",
+        "Evening; Protection; Ruqyah",
+        "Expanded Azkar"
+      ],
+      "count": 9
+    },
+    {
+      "key": "family_duas",
+      "label": "Family Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Family Duas"
+      ],
+      "count": 5
+    },
+    {
+      "key": "forgiveness_duas",
+      "label": "Forgiveness Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Forgiveness Duas",
+        "Istighfar",
+        "Salah Duas"
+      ],
+      "count": 6
+    },
+    {
+      "key": "general_azkar",
+      "label": "General Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Daily Azkar; Tasbih",
+        "Expanded Azkar",
+        "Morning; Evening",
+        "Tasbih; Daily Azkar",
+        "Tasbih; Morning; Evening"
+      ],
+      "count": 7
+    },
+    {
+      "key": "gratitude_duas",
+      "label": "Gratitude Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Gratitude Duas"
+      ],
+      "count": 3
+    },
+    {
+      "key": "guidance_duas",
+      "label": "Guidance Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Guidance Duas"
+      ],
+      "count": 4
+    },
+    {
+      "key": "health_duas",
+      "label": "Health Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Healing",
+        "Health Duas",
+        "Morning and Evening",
+        "Visiting Sick"
+      ],
+      "count": 7
+    },
+    {
+      "key": "istighfar",
+      "label": "Istighfar",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Forms of Istighfar",
+        "Forms of Seeking Forgiveness"
+      ],
+      "count": 13
+    },
+    {
+      "key": "istikhara_duas",
+      "label": "Istikhara Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Istikhara Duas"
+      ],
+      "count": 1
+    },
+    {
+      "key": "knowledge_duas",
+      "label": "Knowledge Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Beneficial Knowledge",
+        "Knowledge Duas"
+      ],
+      "count": 3
+    },
+    {
+      "key": "morning_azkar",
+      "label": "Morning Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Expanded Azkar",
+        "Morning",
+        "Morning Azkar",
+        "Morning; Protection"
+      ],
+      "count": 13
+    },
+    {
+      "key": "parents_duas",
+      "label": "Parents Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Parents Duas"
+      ],
+      "count": 2
+    },
+    {
+      "key": "prophetic_duas",
+      "label": "Prophetic Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Prophetic Duas"
+      ],
+      "count": 5
+    },
+    {
+      "key": "prophetic_and_daily_duas",
+      "label": "Prophetic and Daily Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Daily Use and Special Duas"
+      ],
+      "count": 10
+    },
+    {
+      "key": "protection_azkar",
+      "label": "Protection Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Protection Azkar"
+      ],
+      "count": 1
+    },
+    {
+      "key": "protection_and_ruqyah",
+      "label": "Protection and Ruqyah",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Prophetic Ruqyah",
+        "Quranic Protection",
+        "Quranic Ruqyah",
+        "Three Quls"
+      ],
+      "count": 6
+    },
+    {
+      "key": "quranic_duas",
+      "label": "Quranic Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Distress",
+        "Forgiveness",
+        "Guidance and Hereafter",
+        "Parents",
+        "Quranic Duas",
+        "Rabbana Duas",
+        "Rabbana and Quranic Supplications",
+        "Travel and Settlement"
+      ],
+      "count": 44
+    },
+    {
+      "key": "ramadan_azkar",
+      "label": "Ramadan Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Expanded Azkar"
+      ],
+      "count": 1
+    },
+    {
+      "key": "rizq_duas",
+      "label": "Rizq Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Debt",
+        "Rizq Duas"
+      ],
+      "count": 5
+    },
+    {
+      "key": "ruqyah_and_protection",
+      "label": "Ruqyah and Protection",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Daily Azkar; Protection",
+        "Morning; Evening; Protection",
+        "Ruqyah; Protection"
+      ],
+      "count": 6
+    },
+    {
+      "key": "salawat",
+      "label": "Salawat",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Darood",
+        "Short Salawat"
+      ],
+      "count": 2
+    },
+    {
+      "key": "sleep_azkar",
+      "label": "Sleep Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Sleep; Protection"
+      ],
+      "count": 2
+    },
+    {
+      "key": "travel_duas",
+      "label": "Travel Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Return from Travel",
+        "Travel",
+        "Travel Duas"
+      ],
+      "count": 5
+    },
+    {
+      "key": "wake_up_azkar",
+      "label": "Wake Up Azkar",
+      "types": [
+        "azkar"
+      ],
+      "sub_categories": [
+        "Wake Up Azkar"
+      ],
+      "count": 3
+    },
+    {
+      "key": "witr_and_qunoot_duas",
+      "label": "Witr and Qunoot Duas",
+      "types": [
+        "dua"
+      ],
+      "sub_categories": [
+        "Qunoot al-Witr"
+      ],
+      "count": 1
+    }
+  ],
+  "rotation_modes": [
+    {
+      "key": "mixed",
+      "label": "Mixed",
+      "count": 216
+    },
+    {
+      "key": "dua",
+      "label": "Dua",
+      "count": 150
+    },
+    {
+      "key": "azkar",
+      "label": "Azkar",
+      "count": 66
+    },
+    {
+      "key": "random",
+      "label": "Random",
+      "count": 216
+    },
+    {
+      "key": "quranic_dua",
+      "label": "Quranic Dua",
+      "count": 60
+    },
+    {
+      "key": "daily_dua",
+      "label": "Daily Dua",
+      "count": 76
+    },
+    {
+      "key": "morning",
+      "label": "Morning",
+      "count": 24
+    },
+    {
+      "key": "evening",
+      "label": "Evening",
+      "count": 23
+    },
+    {
+      "key": "after_salah",
+      "label": "After Salah",
+      "count": 20
+    },
+    {
+      "key": "sleep",
+      "label": "Sleep",
+      "count": 11
+    },
+    {
+      "key": "protection",
+      "label": "Protection",
+      "count": 40
+    },
+    {
+      "key": "ruqyah",
+      "label": "Ruqyah",
+      "count": 11
+    },
+    {
+      "key": "istighfar",
+      "label": "Istighfar",
+      "count": 24
+    },
+    {
+      "key": "salawat",
+      "label": "Salawat",
+      "count": 13
+    },
+    {
+      "key": "daily_azkar",
+      "label": "Daily Azkar",
+      "count": 20
+    },
+    {
+      "key": "witr_istikhara",
+      "label": "Witr Istikhara",
+      "count": 4
+    },
+    {
+      "key": "istikhara",
+      "label": "Istikhara",
+      "count": 2
+    },
+    {
+      "key": "qunoot",
+      "label": "Qunoot",
+      "count": 2
+    },
+    {
+      "key": "friday",
+      "label": "Friday",
+      "count": 7
+    },
+    {
+      "key": "ramadan",
+      "label": "Ramadan",
+      "count": 1
+    },
+    {
+      "key": "hajj_umrah",
+      "label": "Hajj Umrah",
+      "count": 0
+    },
+    {
+      "key": "anxiety",
+      "label": "Anxiety",
+      "count": 7
+    },
+    {
+      "key": "health",
+      "label": "Health",
+      "count": 8
+    },
+    {
+      "key": "rizq",
+      "label": "Rizq",
+      "count": 8
+    },
+    {
+      "key": "family",
+      "label": "Family",
+      "count": 7
+    },
+    {
+      "key": "travel",
+      "label": "Travel",
+      "count": 7
+    },
+    {
+      "key": "food",
+      "label": "Food",
+      "count": 3
+    },
+    {
+      "key": "mosque",
+      "label": "Mosque",
+      "count": 0
+    },
+    {
+      "key": "knowledge",
+      "label": "Knowledge",
+      "count": 4
+    },
+    {
+      "key": "home",
+      "label": "Home",
+      "count": 2
+    },
+    {
+      "key": "debt",
+      "label": "Debt",
+      "count": 1
+    }
+  ],
+  "city_presets": [
+    "auto",
+    "riyadh",
+    "jeddah",
+    "makkah",
+    "madinah",
+    "dammam"
+  ]
+}
